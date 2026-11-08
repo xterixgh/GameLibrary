@@ -1,0 +1,37 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="GameLibrary.Pages.Login">
+  <Grid>
+      <Border Classes="card"
+              Width="400"
+              HorizontalAlignment="Center"
+              VerticalAlignment="Center">
+          <StackPanel Spacing="14">
+              <TextBlock Classes="h1"
+                         Text="Личная библиотека игр"/>
+              <TextBlock Text="Вход в учетную запись"/>
+
+              <TextBox x:Name="LoginBox" 
+                       PlaceholderText="Введите логин"/>
+              <TextBox x:Name="PasswordBox"
+                       PlaceholderText="Введите пароль"
+                       PasswordChar="•"/>
+
+              <TextBlock x:Name="InfoText" Classes="ok" IsVisible="False"/>
+              <TextBlock x:Name="ErrorText" Classes="error" IsVisible="False"/>
+
+              <Button Classes="primary"
+                      Content="Войти"
+                      HorizontalAlignment="Stretch"
+                      Click="LoginButton_Click"/>
+              <Button Classes="ghost"
+                  Content="Зарегистрироваться"
+                  HorizontalAlignment="Center"
+                  Click="RegisterButton_Click"/>
+          </StackPanel>
+      </Border>
+  </Grid>
+</UserControl>

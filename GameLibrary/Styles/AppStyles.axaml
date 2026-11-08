@@ -1,0 +1,261 @@
+<Styles xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <Styles.Resources>
+        <Color x:Key="Color.Background">#FF0E1116</Color>
+        <Color x:Key="Color.Surface">#FF171C24</Color>
+        <Color x:Key="Color.SurfaceAlt">#FF212833</Color>
+        <Color x:Key="Color.Field">#FF12171F</Color>
+        <Color x:Key="Color.Line">#FF313A49</Color>
+        <Color x:Key="Color.Text">#FFF4F1EA</Color>
+        <Color x:Key="Color.Muted">#FF9AA3B2</Color>
+        <Color x:Key="Color.Accent">#FFE8A54B</Color>
+        <Color x:Key="Color.AccentHover">#FFF2C078</Color>
+        <Color x:Key="Color.AccentPressed">#FFC8882E</Color>
+        <Color x:Key="Color.AccentInk">#FF1A140C</Color>
+        <Color x:Key="Color.AccentMuted">#FF3A2E1C</Color>
+        <Color x:Key="Color.Danger">#FFE15D5D</Color>
+        <Color x:Key="Color.DangerHover">#FFEF8080</Color>
+        <Color x:Key="Color.Ok">#FF6FCF97</Color>
+        <Color x:Key="Color.RowHover">#FF2A3140</Color>
+
+        <SolidColorBrush x:Key="Brush.Background" Color="{StaticResource Color.Background}"/>
+        <SolidColorBrush x:Key="Brush.Surface" Color="{StaticResource Color.Surface}"/>
+        <SolidColorBrush x:Key="Brush.SurfaceAlt" Color="{StaticResource Color.SurfaceAlt}"/>
+        <SolidColorBrush x:Key="Brush.Field" Color="{StaticResource Color.Field}"/>
+        <SolidColorBrush x:Key="Brush.Line" Color="{StaticResource Color.Line}"/>
+        <SolidColorBrush x:Key="Brush.Text" Color="{StaticResource Color.Text}"/>
+        <SolidColorBrush x:Key="Brush.Muted" Color="{StaticResource Color.Muted}"/>
+        <SolidColorBrush x:Key="Brush.Accent" Color="{StaticResource Color.Accent}"/>
+        <SolidColorBrush x:Key="Brush.AccentHover" Color="{StaticResource Color.AccentHover}"/>
+        <SolidColorBrush x:Key="Brush.AccentPressed" Color="{StaticResource Color.AccentPressed}"/>
+        <SolidColorBrush x:Key="Brush.AccentInk" Color="{StaticResource Color.AccentInk}"/>
+        <SolidColorBrush x:Key="Brush.AccentMuted" Color="{StaticResource Color.AccentMuted}"/>
+        <SolidColorBrush x:Key="Brush.Danger" Color="{StaticResource Color.Danger}"/>
+        <SolidColorBrush x:Key="Brush.DangerHover" Color="{StaticResource Color.DangerHover}"/>
+        <SolidColorBrush x:Key="Brush.Ok" Color="{StaticResource Color.Ok}"/>
+        <SolidColorBrush x:Key="Brush.RowHover" Color="{StaticResource Color.RowHover}"/>
+    </Styles.Resources>
+
+    <Style Selector="Window">
+        <Setter Property="Background" Value="{DynamicResource Brush.Background}"/>
+        <Setter Property="Foreground" Value="{DynamicResource Brush.Text}"/>
+        <Setter Property="FontFamily" Value="Inter"/>
+        <Setter Property="FontSize" Value="14"/>
+    </Style>
+
+    <Style Selector="TextBlock.h1">
+        <Setter Property="FontSize" Value="28"/>
+        <Setter Property="FontWeight" Value="SemiBold"/>
+        <Setter Property="Foreground" Value="{DynamicResource Brush.Text}"/>
+    </Style>
+
+    <Style Selector="TextBlock.h2">
+        <Setter Property="FontSize" Value="18"/>
+        <Setter Property="FontWeight" Value="SemiBold"/>
+        <Setter Property="Foreground" Value="{DynamicResource Brush.Text}"/>
+    </Style>
+
+    <Style Selector="TextBlock.label">
+        <Setter Property="FontSize" Value="12"/>
+        <Setter Property="FontWeight" Value="SemiBold"/>
+        <Setter Property="Foreground" Value="{DynamicResource Brush.Muted}"/>
+    </Style>
+
+    <Style Selector="TextBlock.muted">
+        <Setter Property="FontSize" Value="13"/>
+        <Setter Property="Foreground" Value="{DynamicResource Brush.Muted}"/>
+        <Setter Property="TextWrapping" Value="Wrap"/>
+    </Style>
+
+    <Style Selector="TextBlock.error">
+        <Setter Property="FontSize" Value="13"/>
+        <Setter Property="Foreground" Value="{DynamicResource Brush.Danger}"/>
+        <Setter Property="TextWrapping" Value="Wrap"/>
+    </Style>
+
+    <Style Selector="TextBlock.ok">
+        <Setter Property="FontSize" Value="13"/>
+        <Setter Property="Foreground" Value="{DynamicResource Brush.Ok}"/>
+        <Setter Property="TextWrapping" Value="Wrap"/>
+    </Style>
+
+    <Style Selector="Border.card">
+        <Setter Property="Background" Value="{DynamicResource Brush.Surface}"/>
+        <Setter Property="BorderBrush" Value="{DynamicResource Brush.Line}"/>
+        <Setter Property="BorderThickness" Value="1"/>
+        <Setter Property="CornerRadius" Value="18"/>
+        <Setter Property="Padding" Value="28"/>
+        <Setter Property="BoxShadow" Value="0 18 40 0 #59000000"/>
+    </Style>
+
+    <Style Selector="Border.panel">
+        <Setter Property="Background" Value="{DynamicResource Brush.Surface}"/>
+        <Setter Property="BorderBrush" Value="{DynamicResource Brush.Line}"/>
+        <Setter Property="BorderThickness" Value="1"/>
+        <Setter Property="CornerRadius" Value="12"/>
+        <Setter Property="Padding" Value="16"/>
+    </Style>
+
+    <Style Selector="Border.topbar">
+        <Setter Property="Background" Value="{DynamicResource Brush.Surface}"/>
+        <Setter Property="BorderBrush" Value="{DynamicResource Brush.Line}"/>
+        <Setter Property="BorderThickness" Value="0,0,0,1"/>
+        <Setter Property="Padding" Value="20,14"/>
+    </Style>
+
+    <Style Selector="TextBox">
+        <Setter Property="MinHeight" Value="42"/>
+        <Setter Property="Padding" Value="12,8"/>
+        <Setter Property="CornerRadius" Value="10"/>
+        <Setter Property="Background" Value="{DynamicResource Brush.Field}"/>
+        <Setter Property="Foreground" Value="{DynamicResource Brush.Text}"/>
+        <Setter Property="BorderBrush" Value="{DynamicResource Brush.Line}"/>
+        <Setter Property="BorderThickness" Value="1"/>
+        <Setter Property="CaretBrush" Value="{DynamicResource Brush.Accent}"/>
+        <Setter Property="SelectionBrush" Value="{DynamicResource Brush.AccentMuted}"/>
+    </Style>
+
+    <Style Selector="TextBox:focus">
+        <Setter Property="BorderBrush" Value="{DynamicResource Brush.Accent}"/>
+    </Style>
+
+    <Style Selector="ComboBox">
+        <Setter Property="MinHeight" Value="42"/>
+        <Setter Property="Padding" Value="12,8"/>
+        <Setter Property="CornerRadius" Value="10"/>
+        <Setter Property="Background" Value="{DynamicResource Brush.Field}"/>
+        <Setter Property="Foreground" Value="{DynamicResource Brush.Text}"/>
+        <Setter Property="BorderBrush" Value="{DynamicResource Brush.Line}"/>
+        <Setter Property="BorderThickness" Value="1"/>
+    </Style>
+
+    <Style Selector="ComboBox:focus">
+        <Setter Property="BorderBrush" Value="{DynamicResource Brush.Accent}"/>
+    </Style>
+
+    <Style Selector="Button">
+        <Setter Property="MinHeight" Value="42"/>
+        <Setter Property="Padding" Value="16,8"/>
+        <Setter Property="CornerRadius" Value="10"/>
+        <Setter Property="Background" Value="Transparent"/>
+        <Setter Property="Foreground" Value="{DynamicResource Brush.Text}"/>
+        <Setter Property="BorderBrush" Value="{DynamicResource Brush.Line}"/>
+        <Setter Property="BorderThickness" Value="1"/>
+        <Setter Property="FontWeight" Value="SemiBold"/>
+        <Setter Property="Cursor" Value="Hand"/>
+        <Setter Property="HorizontalContentAlignment" Value="Center"/>
+        <Setter Property="VerticalContentAlignment" Value="Center"/>
+    </Style>
+
+    <Style Selector="Button:pointerover">
+        <Setter Property="Background" Value="{DynamicResource Brush.SurfaceAlt}"/>
+    </Style>
+
+    <Style Selector="Button:pressed">
+        <Setter Property="Background" Value="{DynamicResource Brush.Field}"/>
+    </Style>
+
+    <Style Selector="Button:disabled">
+        <Setter Property="Opacity" Value="0.45"/>
+    </Style>
+
+    <Style Selector="Button.primary">
+        <Setter Property="Background" Value="{DynamicResource Brush.Accent}"/>
+        <Setter Property="Foreground" Value="{DynamicResource Brush.AccentInk}"/>
+        <Setter Property="BorderThickness" Value="0"/>
+    </Style>
+
+    <Style Selector="Button.primary:pointerover">
+        <Setter Property="Background" Value="{DynamicResource Brush.AccentHover}"/>
+    </Style>
+
+    <Style Selector="Button.primary:pressed">
+        <Setter Property="Background" Value="{DynamicResource Brush.AccentPressed}"/>
+    </Style>
+
+    <Style Selector="Button.danger">
+        <Setter Property="Background" Value="{DynamicResource Brush.Danger}"/>
+        <Setter Property="Foreground" Value="#FFFFFFFF"/>
+        <Setter Property="BorderThickness" Value="0"/>
+    </Style>
+
+    <Style Selector="Button.danger:pointerover">
+        <Setter Property="Background" Value="{DynamicResource Brush.DangerHover}"/>
+    </Style>
+
+    <Style Selector="Button.ghost">
+        <Setter Property="Background" Value="{DynamicResource Brush.SurfaceAlt}"/>
+        <Setter Property="Foreground" Value="{DynamicResource Brush.Accent}"/>
+        <Setter Property="BorderThickness" Value="0"/>
+        <Setter Property="FontWeight" Value="Normal"/>
+    </Style>
+
+    <Style Selector="Button.ghost:pointerover">
+        <Setter Property="Background" Value="{DynamicResource Brush.SurfaceAlt}"/>
+    </Style>
+
+    <Style Selector="ListBox">
+        <Setter Property="Background" Value="Transparent"/>
+        <Setter Property="BorderThickness" Value="0"/>
+    </Style>
+
+    <Style Selector="ListBoxItem">
+        <Setter Property="Padding" Value="12,8"/>
+        <Setter Property="CornerRadius" Value="8"/>
+        <Setter Property="Foreground" Value="{DynamicResource Brush.Text}"/>
+    </Style>
+
+    <Style Selector="ListBoxItem:pointerover">
+        <Setter Property="Background" Value="{DynamicResource Brush.RowHover}"/>
+    </Style>
+
+    <Style Selector="ListBoxItem:selected">
+        <Setter Property="Background" Value="{DynamicResource Brush.AccentMuted}"/>
+        <Setter Property="Foreground" Value="{DynamicResource Brush.Text}"/>
+    </Style>
+
+    <Style Selector="CheckBox">
+        <Setter Property="Foreground" Value="{DynamicResource Brush.Text}"/>
+        <Setter Property="MinHeight" Value="32"/>
+    </Style>
+
+    <Style Selector="DataGrid">
+        <Setter Property="Background" Value="{DynamicResource Brush.Surface}"/>
+        <Setter Property="Foreground" Value="{DynamicResource Brush.Text}"/>
+        <Setter Property="BorderBrush" Value="{DynamicResource Brush.Line}"/>
+        <Setter Property="BorderThickness" Value="1"/>
+        <Setter Property="CornerRadius" Value="12"/>
+        <Setter Property="RowBackground" Value="{DynamicResource Brush.Surface}"/>
+        <Setter Property="HorizontalGridLinesBrush" Value="{DynamicResource Brush.Line}"/>
+        <Setter Property="VerticalGridLinesBrush" Value="{DynamicResource Brush.Line}"/>
+        <Setter Property="GridLinesVisibility" Value="Horizontal"/>
+        <Setter Property="RowHeight" Value="42"/>
+        <Setter Property="ColumnHeaderHeight" Value="44"/>
+        <Setter Property="CanUserResizeColumns" Value="True"/>
+        <Setter Property="HeadersVisibility" Value="Column"/>
+    </Style>
+
+    <Style Selector="DataGridColumnHeader">
+        <Setter Property="Background" Value="{DynamicResource Brush.SurfaceAlt}"/>
+        <Setter Property="Foreground" Value="{DynamicResource Brush.Text}"/>
+        <Setter Property="FontWeight" Value="SemiBold"/>
+        <Setter Property="SeparatorBrush" Value="{DynamicResource Brush.Line}"/>
+        <Setter Property="Padding" Value="12,0"/>
+    </Style>
+
+    <Style Selector="DataGridCell">
+        <Setter Property="Padding" Value="12,0"/>
+        <Setter Property="Foreground" Value="{DynamicResource Brush.Text}"/>
+    </Style>
+
+    <Style Selector="DataGridRow:pointerover">
+        <Setter Property="Background" Value="{DynamicResource Brush.RowHover}"/>
+    </Style>
+
+    <Style Selector="DataGridRow:selected">
+        <Setter Property="Background" Value="{DynamicResource Brush.AccentMuted}"/>
+        <Setter Property="Foreground" Value="{DynamicResource Brush.Text}"/>
+    </Style>
+
+</Styles>

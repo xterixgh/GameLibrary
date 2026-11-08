@@ -1,12 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "Cfw0pMYRhvE=",
+  "dgSpecHash": "Fbs+266reI4=",
   "success": true,
-  "projectFilePath": "C:\\Users\\xteri\\source\\repos\\GameLibrary\\GameLibrary\\GameLibrary.csproj",
+  "projectFilePath": "C:\\Users\\xteri\\OneDrive\\Рабочий стол\\Cursa\\GameLibrary\\GameLibrary\\GameLibrary.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\xteri\\.nuget\\packages\\avalonia\\12.1.4\\avalonia.12.1.4.nupkg.sha512",
     "C:\\Users\\xteri\\.nuget\\packages\\avalonia.angle.windows.natives\\2.1.27548.20260419\\avalonia.angle.windows.natives.2.1.27548.20260419.nupkg.sha512",
     "C:\\Users\\xteri\\.nuget\\packages\\avalonia.buildservices\\11.3.2\\avalonia.buildservices.11.3.2.nupkg.sha512",
+    "C:\\Users\\xteri\\.nuget\\packages\\avalonia.controls.datagrid\\12.1.2\\avalonia.controls.datagrid.12.1.2.nupkg.sha512",
     "C:\\Users\\xteri\\.nuget\\packages\\avalonia.desktop\\12.1.4\\avalonia.desktop.12.1.4.nupkg.sha512",
     "C:\\Users\\xteri\\.nuget\\packages\\avalonia.fonts.inter\\12.1.4\\avalonia.fonts.inter.12.1.4.nupkg.sha512",
     "C:\\Users\\xteri\\.nuget\\packages\\avalonia.freedesktop\\12.1.4\\avalonia.freedesktop.12.1.4.nupkg.sha512",

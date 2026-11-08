@@ -4,6 +4,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
         x:Class="GameLibrary.MainWindow"
-        Title="GameLibrary">
-    Welcome to Avalonia!
+        Title="Личная библиотека игр"
+        Width="1100" Height="700"
+        WindowStartupLocation="CenterScreen"
+        Icon="avares://GameLibrary/Images/icon.png">
+    <ContentControl x:Name="MainControl"/>
 </Window>
