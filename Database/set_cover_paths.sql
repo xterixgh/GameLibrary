@@ -1,0 +1,14 @@
+UPDATE "Games" SET "CoverPath" = 'hades.jpg' WHERE "Id" = 1;
+UPDATE "Games" SET "CoverPath" = 'witcher3.jpg' WHERE "Id" = 2;
+UPDATE "Games" SET "CoverPath" = 'stardew.jpg' WHERE "Id" = 3;
+UPDATE "Games" SET "CoverPath" = 'celeste.jpg' WHERE "Id" = 4;
+UPDATE "Games" SET "CoverPath" = 'eldenring.jpg' WHERE "Id" = 5;
+UPDATE "Games" SET "CoverPath" = 'balatro.jpg' WHERE "Id" = 6;
+UPDATE "Games" SET "CoverPath" = 'hollowknight.jpg' WHERE "Id" = 7;
+UPDATE "Games" SET "CoverPath" = 'cyberpunk.jpg' WHERE "Id" = 8;
+UPDATE "Games" SET "CoverPath" = 'deadspace.jpg' WHERE "Id" = 9;
+UPDATE "Games" SET "CoverPath" = 'expedition33.jpg' WHERE "Id" = 10;
+UPDATE "Games" SET "CoverPath" = 'silksong.jpg' WHERE "Id" = 11;
+UPDATE "Games" SET "CoverPath" = 'civ6.jpg' WHERE "Id" = 12;
+UPDATE "Games" SET "CoverPath" = 'portal2.jpg' WHERE "Id" = 13;
+UPDATE "Games" SET "CoverPath" = 'ittakestwo.jpg' WHERE "Id" = 14;

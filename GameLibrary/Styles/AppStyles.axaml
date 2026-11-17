@@ -2,39 +2,63 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
 
     <Styles.Resources>
-        <Color x:Key="Color.Background">#FF0E1116</Color>
-        <Color x:Key="Color.Surface">#FF171C24</Color>
-        <Color x:Key="Color.SurfaceAlt">#FF212833</Color>
-        <Color x:Key="Color.Field">#FF12171F</Color>
-        <Color x:Key="Color.Line">#FF313A49</Color>
-        <Color x:Key="Color.Text">#FFF4F1EA</Color>
-        <Color x:Key="Color.Muted">#FF9AA3B2</Color>
-        <Color x:Key="Color.Accent">#FFE8A54B</Color>
-        <Color x:Key="Color.AccentHover">#FFF2C078</Color>
-        <Color x:Key="Color.AccentPressed">#FFC8882E</Color>
-        <Color x:Key="Color.AccentInk">#FF1A140C</Color>
-        <Color x:Key="Color.AccentMuted">#FF3A2E1C</Color>
-        <Color x:Key="Color.Danger">#FFE15D5D</Color>
-        <Color x:Key="Color.DangerHover">#FFEF8080</Color>
-        <Color x:Key="Color.Ok">#FF6FCF97</Color>
-        <Color x:Key="Color.RowHover">#FF2A3140</Color>
+        <ResourceDictionary>
+            <ResourceDictionary.ThemeDictionaries>
+                <ResourceDictionary x:Key="Dark">
+                    <Color x:Key="Color.Background">#FF0E1116</Color>
+                    <Color x:Key="Color.Surface">#FF171C24</Color>
+                    <Color x:Key="Color.SurfaceAlt">#FF212833</Color>
+                    <Color x:Key="Color.Field">#FF12171F</Color>
+                    <Color x:Key="Color.Line">#FF313A49</Color>
+                    <Color x:Key="Color.Text">#FFF4F1EA</Color>
+                    <Color x:Key="Color.Muted">#FF9AA3B2</Color>
+                    <Color x:Key="Color.Accent">#FFE8A54B</Color>
+                    <Color x:Key="Color.AccentHover">#FFF2C078</Color>
+                    <Color x:Key="Color.AccentPressed">#FFC8882E</Color>
+                    <Color x:Key="Color.AccentInk">#FF1A140C</Color>
+                    <Color x:Key="Color.AccentMuted">#FF3A2E1C</Color>
+                    <Color x:Key="Color.Danger">#FFE15D5D</Color>
+                    <Color x:Key="Color.DangerHover">#FFEF8080</Color>
+                    <Color x:Key="Color.Ok">#FF6FCF97</Color>
+                    <Color x:Key="Color.RowHover">#FF2A3140</Color>
+                </ResourceDictionary>
+                <ResourceDictionary x:Key="Light">
+                    <Color x:Key="Color.Background">#FFF3F0EA</Color>
+                    <Color x:Key="Color.Surface">#FFFFFFFF</Color>
+                    <Color x:Key="Color.SurfaceAlt">#FFE8E2D8</Color>
+                    <Color x:Key="Color.Field">#FFF7F4EF</Color>
+                    <Color x:Key="Color.Line">#FFD5CEC3</Color>
+                    <Color x:Key="Color.Text">#FF1C1915</Color>
+                    <Color x:Key="Color.Muted">#FF6B645A</Color>
+                    <Color x:Key="Color.Accent">#FFC8882E</Color>
+                    <Color x:Key="Color.AccentHover">#FFE8A54B</Color>
+                    <Color x:Key="Color.AccentPressed">#FFA56C1F</Color>
+                    <Color x:Key="Color.AccentInk">#FFFFFFFF</Color>
+                    <Color x:Key="Color.AccentMuted">#FFF0E0C4</Color>
+                    <Color x:Key="Color.Danger">#FFD64545</Color>
+                    <Color x:Key="Color.DangerHover">#FFE15D5D</Color>
+                    <Color x:Key="Color.Ok">#FF2F9E60</Color>
+                    <Color x:Key="Color.RowHover">#FFEFE8DC</Color>
+                </ResourceDictionary>
+            </ResourceDictionary.ThemeDictionaries>
 
-        <SolidColorBrush x:Key="Brush.Background" Color="{StaticResource Color.Background}"/>
-        <SolidColorBrush x:Key="Brush.Surface" Color="{StaticResource Color.Surface}"/>
-        <SolidColorBrush x:Key="Brush.SurfaceAlt" Color="{StaticResource Color.SurfaceAlt}"/>
-        <SolidColorBrush x:Key="Brush.Field" Color="{StaticResource Color.Field}"/>
-        <SolidColorBrush x:Key="Brush.Line" Color="{StaticResource Color.Line}"/>
-        <SolidColorBrush x:Key="Brush.Text" Color="{StaticResource Color.Text}"/>
-        <SolidColorBrush x:Key="Brush.Muted" Color="{StaticResource Color.Muted}"/>
-        <SolidColorBrush x:Key="Brush.Accent" Color="{StaticResource Color.Accent}"/>
-        <SolidColorBrush x:Key="Brush.AccentHover" Color="{StaticResource Color.AccentHover}"/>
-        <SolidColorBrush x:Key="Brush.AccentPressed" Color="{StaticResource Color.AccentPressed}"/>
-        <SolidColorBrush x:Key="Brush.AccentInk" Color="{StaticResource Color.AccentInk}"/>
-        <SolidColorBrush x:Key="Brush.AccentMuted" Color="{StaticResource Color.AccentMuted}"/>
-        <SolidColorBrush x:Key="Brush.Danger" Color="{StaticResource Color.Danger}"/>
-        <SolidColorBrush x:Key="Brush.DangerHover" Color="{StaticResource Color.DangerHover}"/>
-        <SolidColorBrush x:Key="Brush.Ok" Color="{StaticResource Color.Ok}"/>
-        <SolidColorBrush x:Key="Brush.RowHover" Color="{StaticResource Color.RowHover}"/>
+            <SolidColorBrush x:Key="Brush.Background" Color="{DynamicResource Color.Background}"/>
+            <SolidColorBrush x:Key="Brush.Surface" Color="{DynamicResource Color.Surface}"/>
+            <SolidColorBrush x:Key="Brush.SurfaceAlt" Color="{DynamicResource Color.SurfaceAlt}"/>
+            <SolidColorBrush x:Key="Brush.Field" Color="{DynamicResource Color.Field}"/>
+            <SolidColorBrush x:Key="Brush.Line" Color="{DynamicResource Color.Line}"/>
+            <SolidColorBrush x:Key="Brush.Text" Color="{DynamicResource Color.Text}"/>
+            <SolidColorBrush x:Key="Brush.Muted" Color="{DynamicResource Color.Muted}"/>
+            <SolidColorBrush x:Key="Brush.Accent" Color="{DynamicResource Color.Accent}"/>
+            <SolidColorBrush x:Key="Brush.AccentHover" Color="{DynamicResource Color.AccentHover}"/>
+            <SolidColorBrush x:Key="Brush.AccentPressed" Color="{DynamicResource Color.AccentPressed}"/>
+            <SolidColorBrush x:Key="Brush.AccentInk" Color="{DynamicResource Color.AccentInk}"/>
+            <SolidColorBrush x:Key="Brush.AccentMuted" Color="{DynamicResource Color.AccentMuted}"/>
+            <SolidColorBrush x:Key="Brush.Danger" Color="{DynamicResource Color.Danger}"/>
+            <SolidColorBrush x:Key="Brush.DangerHover" Color="{DynamicResource Color.DangerHover}"/>
+            <SolidColorBrush x:Key="Brush.Ok" Color="{DynamicResource Color.Ok}"/>
+            <SolidColorBrush x:Key="Brush.RowHover" Color="{DynamicResource Color.RowHover}"/>
+        </ResourceDictionary>
     </Styles.Resources>
 
     <Style Selector="Window">
@@ -256,6 +280,56 @@
     <Style Selector="DataGridRow:selected">
         <Setter Property="Background" Value="{DynamicResource Brush.AccentMuted}"/>
         <Setter Property="Foreground" Value="{DynamicResource Brush.Text}"/>
+    </Style>
+
+    <Style Selector="Border.gamecard">
+        <Setter Property="Background" Value="{DynamicResource Brush.SurfaceAlt}"/>
+        <Setter Property="BorderBrush" Value="{DynamicResource Brush.Line}"/>
+        <Setter Property="BorderThickness" Value="1"/>
+        <Setter Property="CornerRadius" Value="14"/>
+        <Setter Property="Width" Value="210"/>
+        <Setter Property="Cursor" Value="Hand"/>
+        <Setter Property="ClipToBounds" Value="True"/>
+    </Style>
+
+    <Style Selector="Border.gamecard:pointerover">
+        <Setter Property="BorderBrush" Value="{DynamicResource Brush.Accent}"/>
+    </Style>
+
+    <Style Selector="Border.gamecard.selected">
+        <Setter Property="BorderBrush" Value="{DynamicResource Brush.Accent}"/>
+        <Setter Property="BorderThickness" Value="2"/>
+        <Setter Property="BoxShadow" Value="0 10 24 0 #66000000"/>
+    </Style>
+
+    <Style Selector="Border.coverplace">
+        <Setter Property="Background" Value="{DynamicResource Brush.Field}"/>
+        <Setter Property="Width" Value="210"/>
+        <Setter Property="Height" Value="280"/>
+    </Style>
+
+    <Style Selector="TextBlock.coverletter">
+        <Setter Property="FontSize" Value="64"/>
+        <Setter Property="FontWeight" Value="Bold"/>
+        <Setter Property="Foreground" Value="{DynamicResource Brush.Accent}"/>
+        <Setter Property="HorizontalAlignment" Value="Center"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+    </Style>
+
+    <Style Selector="TextBlock.badge">
+        <Setter Property="FontSize" Value="11"/>
+        <Setter Property="FontWeight" Value="SemiBold"/>
+        <Setter Property="Foreground" Value="{DynamicResource Brush.AccentInk}"/>
+        <Setter Property="Background" Value="{DynamicResource Brush.Accent}"/>
+        <Setter Property="Padding" Value="8,3"/>
+    </Style>
+
+    <Style Selector="Border.hero">
+        <Setter Property="Background" Value="{DynamicResource Brush.Surface}"/>
+        <Setter Property="BorderBrush" Value="{DynamicResource Brush.Line}"/>
+        <Setter Property="BorderThickness" Value="1"/>
+        <Setter Property="CornerRadius" Value="16"/>
+        <Setter Property="Padding" Value="20"/>
     </Style>
 
 </Styles>

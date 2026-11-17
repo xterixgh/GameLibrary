@@ -17,6 +17,10 @@ namespace GameLibrary.Models
         public int Rating { get; set; }
         public bool IsWishlist { get; set; }
         public int PlaytimeMinutes { get; set; }
+        [MaxLength(500)]
+        public string? CoverPath { get; set; }
+        [MaxLength(1000)]
+        public string? LaunchPath { get; set; }
         public DateTime CreatedAt { get; set; }
         public DateTime UpdateAt { get; set; }
         [ForeignKey("User")]

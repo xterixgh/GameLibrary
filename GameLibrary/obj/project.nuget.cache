@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Fbs+266reI4=",
+  "dgSpecHash": "Nwfnb0o9YAU=",
   "success": true,
-  "projectFilePath": "C:\\Users\\xteri\\OneDrive\\Рабочий стол\\Cursa\\GameLibrary\\GameLibrary\\GameLibrary.csproj",
+  "projectFilePath": "C:\\Users\\xteri\\source\\repos\\GameLibrary\\GameLibrary\\GameLibrary.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\xteri\\.nuget\\packages\\avalonia\\12.1.4\\avalonia.12.1.4.nupkg.sha512",
     "C:\\Users\\xteri\\.nuget\\packages\\avalonia.angle.windows.natives\\2.1.27548.20260419\\avalonia.angle.windows.natives.2.1.27548.20260419.nupkg.sha512",

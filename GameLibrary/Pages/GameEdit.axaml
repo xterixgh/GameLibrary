@@ -1,0 +1,74 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" d:DesignWidth="900" d:DesignHeight="700"
+             x:Class="GameLibrary.Pages.GameEdit"
+             x:CompileBindings="False">
+	<ScrollViewer VerticalScrollBarVisibility="Auto">
+		<Border Classes="card"
+				Width="780"
+				Margin="20"
+				HorizontalAlignment="Center"
+				VerticalAlignment="Center">
+			<Grid ColumnDefinitions="220,*" ColumnSpacing="24">
+				<StackPanel Spacing="10">
+					<TextBlock Classes="label" Text="ОБЛОЖКА"/>
+					<Border Classes="coverplace" Width="200" Height="270" CornerRadius="12" ClipToBounds="True">
+						<Panel>
+							<TextBlock x:Name="CoverLetter"
+									   Classes="coverletter"
+									   Text="?"/>
+							<Image x:Name="CoverPreview"
+								   Stretch="UniformToFill"
+								   IsVisible="False"/>
+						</Panel>
+					</Border>
+					<Button Classes="ghost"
+							Content="Выбрать картинку"
+							HorizontalAlignment="Stretch"
+							Click="PickCover_Click"/>
+					<Button Classes="ghost"
+							Content="Убрать обложку"
+							HorizontalAlignment="Stretch"
+							Click="ClearCover_Click"/>
+				</StackPanel>
+
+				<StackPanel Grid.Column="1" Spacing="12">
+					<TextBlock x:Name="TitleText" Classes="h1" Text="Игра"/>
+					<TextBox x:Name="NameBox" PlaceholderText="Название"/>
+					<TextBox x:Name="YearBox" PlaceholderText="Год"/>
+					<ComboBox x:Name="StatusBox" PlaceholderText="Статус" HorizontalAlignment="Stretch">
+						<ComboBox.ItemTemplate>
+							<DataTemplate>
+								<TextBlock Text="{Binding Name}"/>
+							</DataTemplate>
+						</ComboBox.ItemTemplate>
+					</ComboBox>
+					<TextBox x:Name="RatingBox" PlaceholderText="Оценка 1-10"/>
+					<TextBox x:Name="MinutesBox" PlaceholderText="Минуты"/>
+					<CheckBox x:Name="WishlistBox" Content="Wishlist"/>
+					<TextBox x:Name="LaunchPathBox" PlaceholderText="Путь к игре (.exe)"/>
+					<Button Classes="ghost"
+							Content="Указать .exe"
+							HorizontalAlignment="Left"
+							Click="PickExe_Click"/>
+					<TextBox x:Name="DescBox"
+							 PlaceholderText="Описание"
+							 AcceptsReturn="True"
+							 Height="90"
+							 TextWrapping="Wrap"/>
+					<TextBlock x:Name="ErrorText" Classes="error" IsVisible="False"/>
+					<Button Classes="primary"
+							Content="Сохранить"
+							HorizontalAlignment="Stretch"
+							Click="SaveButton_Click"/>
+					<Button Classes="ghost"
+							Content="Назад"
+							HorizontalAlignment="Center"
+							Click="BackButton_Click"/>
+				</StackPanel>
+			</Grid>
+		</Border>
+	</ScrollViewer>
+</UserControl>

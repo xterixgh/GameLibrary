@@ -85,6 +85,14 @@ namespace GameLibrary.Migrations
                     b.Property<bool>("IsWishlist")
                         .HasColumnType("boolean");
 
+                    b.Property<string>("CoverPath")
+                        .HasMaxLength(500)
+                        .HasColumnType("character varying(500)");
+
+                    b.Property<string>("LaunchPath")
+                        .HasMaxLength(1000)
+                        .HasColumnType("character varying(1000)");
+
                     b.Property<int>("PlayStatuses_Id")
                         .HasColumnType("integer");
 

@@ -1,0 +1,107 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+			 xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+			 xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+			 xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+			 mc:Ignorable="d" d:DesignWidth="1100" d:DesignHeight="700"
+			 x:Class="GameLibrary.Pages.Statistics"
+			 x:CompileBindings="False">
+	<Grid RowDefinitions="Auto,*">
+		<Border Classes="topbar" Grid.Row="0">
+			<Grid ColumnDefinitions="*,Auto">
+				<StackPanel Spacing="4" VerticalAlignment="Center">
+					<TextBlock Classes="h2" Text="Статистика"/>
+					<TextBlock Classes="muted" Text="Сводка только для чтения, карточки отсюда не меняются"/>
+				</StackPanel>
+				<Button Grid.Column="1"
+						Classes="ghost"
+						Content="Назад"
+						Click="BackButton_Click"
+						VerticalAlignment="Center"/>
+			</Grid>
+		</Border>
+
+		<ScrollViewer Grid.Row="1" Margin="20">
+			<StackPanel Spacing="16">
+				<UniformGrid Columns="4" RowSpacing="12" ColumnSpacing="12">
+					<Border Classes="hero">
+						<StackPanel Spacing="6">
+							<TextBlock Classes="label" Text="ИГР"/>
+							<TextBlock x:Name="TotalText" Classes="h1" Text="0"/>
+						</StackPanel>
+					</Border>
+					<Border Classes="hero">
+						<StackPanel Spacing="6">
+							<TextBlock Classes="label" Text="СРЕДНЯЯ ОЦЕНКА"/>
+							<TextBlock x:Name="AverageText" Classes="h1" Text="—"/>
+							<TextBlock x:Name="AverageHint" Classes="muted"/>
+						</StackPanel>
+					</Border>
+					<Border Classes="hero">
+						<StackPanel Spacing="6">
+							<TextBlock Classes="label" Text="ОБЩЕЕ ВРЕМЯ"/>
+							<TextBlock x:Name="TimeText" Classes="h1" Text="0"/>
+							<TextBlock x:Name="TimeHint" Classes="muted"/>
+						</StackPanel>
+					</Border>
+					<Border Classes="hero">
+						<StackPanel Spacing="6">
+							<TextBlock Classes="label" Text="WISHLIST"/>
+							<TextBlock x:Name="WishlistText" Classes="h1" Text="0"/>
+						</StackPanel>
+					</Border>
+				</UniformGrid>
+
+				<Grid ColumnDefinitions="*,*,*" ColumnSpacing="12">
+					<Border Classes="panel">
+						<StackPanel Spacing="10">
+							<TextBlock Classes="h2" Text="По статусам"/>
+							<ItemsControl x:Name="StatusList">
+								<ItemsControl.ItemTemplate>
+									<DataTemplate>
+										<Grid ColumnDefinitions="*,Auto" Margin="0,0,0,8">
+											<TextBlock Text="{Binding Name}" VerticalAlignment="Center"/>
+											<TextBlock Grid.Column="1" Text="{Binding Count}" FontWeight="SemiBold"/>
+										</Grid>
+									</DataTemplate>
+								</ItemsControl.ItemTemplate>
+							</ItemsControl>
+							<TextBlock x:Name="StatusEmpty" Classes="muted" Text="Нет игр" IsVisible="False"/>
+						</StackPanel>
+					</Border>
+					<Border Classes="panel" Grid.Column="1">
+						<StackPanel Spacing="10">
+							<TextBlock Classes="h2" Text="По платформам"/>
+							<ItemsControl x:Name="PlatformList">
+								<ItemsControl.ItemTemplate>
+									<DataTemplate>
+										<Grid ColumnDefinitions="*,Auto" Margin="0,0,0,8">
+											<TextBlock Text="{Binding Name}" VerticalAlignment="Center"/>
+											<TextBlock Grid.Column="1" Text="{Binding Count}" FontWeight="SemiBold"/>
+										</Grid>
+									</DataTemplate>
+								</ItemsControl.ItemTemplate>
+							</ItemsControl>
+							<TextBlock x:Name="PlatformEmpty" Classes="muted" Text="Платформы не выбраны" IsVisible="False"/>
+						</StackPanel>
+					</Border>
+					<Border Classes="panel" Grid.Column="2">
+						<StackPanel Spacing="10">
+							<TextBlock Classes="h2" Text="По жанрам"/>
+							<ItemsControl x:Name="GenreList">
+								<ItemsControl.ItemTemplate>
+									<DataTemplate>
+										<Grid ColumnDefinitions="*,Auto" Margin="0,0,0,8">
+											<TextBlock Text="{Binding Name}" VerticalAlignment="Center"/>
+											<TextBlock Grid.Column="1" Text="{Binding Count}" FontWeight="SemiBold"/>
+										</Grid>
+									</DataTemplate>
+								</ItemsControl.ItemTemplate>
+							</ItemsControl>
+							<TextBlock x:Name="GenreEmpty" Classes="muted" Text="Жанры не выбраны" IsVisible="False"/>
+						</StackPanel>
+					</Border>
+				</Grid>
+			</StackPanel>
+		</ScrollViewer>
+	</Grid>
+</UserControl>

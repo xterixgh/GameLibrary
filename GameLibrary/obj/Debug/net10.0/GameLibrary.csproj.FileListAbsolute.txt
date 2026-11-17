@@ -374,3 +374,19 @@ C:\Users\xteri\OneDrive\Рабочий стол\Cursa\GameLibrary\GameLibrary\ob
 C:\Users\xteri\OneDrive\Рабочий стол\Cursa\GameLibrary\GameLibrary\obj\Debug\net10.0\GameLibrary.genruntimeconfig.cache
 C:\Users\xteri\OneDrive\Рабочий стол\Cursa\GameLibrary\GameLibrary\obj\Debug\net10.0\ref\GameLibrary.dll
 C:\Users\xteri\OneDrive\Рабочий стол\Cursa\GameLibrary\GameLibrary\bin\Debug\net10.0\Avalonia.Controls.DataGrid.dll
+C:\Users\xteri\source\repos\GameLibrary\GameLibrary\bin\Debug\net10.0\Avalonia.Controls.DataGrid.dll
+C:\Users\xteri\source\repos\GameLibrary\GameLibrary\obj\Debug\net10.0\GameLibrary.sourcelink.json
+C:\Users\xteri\source\repos\GameLibrary\GameLibrary\bin\Debug\net10.0\Covers\balatro.jpg
+C:\Users\xteri\source\repos\GameLibrary\GameLibrary\bin\Debug\net10.0\Covers\celeste.jpg
+C:\Users\xteri\source\repos\GameLibrary\GameLibrary\bin\Debug\net10.0\Covers\civ6.jpg
+C:\Users\xteri\source\repos\GameLibrary\GameLibrary\bin\Debug\net10.0\Covers\cyberpunk.jpg
+C:\Users\xteri\source\repos\GameLibrary\GameLibrary\bin\Debug\net10.0\Covers\deadspace.jpg
+C:\Users\xteri\source\repos\GameLibrary\GameLibrary\bin\Debug\net10.0\Covers\eldenring.jpg
+C:\Users\xteri\source\repos\GameLibrary\GameLibrary\bin\Debug\net10.0\Covers\expedition33.jpg
+C:\Users\xteri\source\repos\GameLibrary\GameLibrary\bin\Debug\net10.0\Covers\hades.jpg
+C:\Users\xteri\source\repos\GameLibrary\GameLibrary\bin\Debug\net10.0\Covers\hollowknight.jpg
+C:\Users\xteri\source\repos\GameLibrary\GameLibrary\bin\Debug\net10.0\Covers\ittakestwo.jpg
+C:\Users\xteri\source\repos\GameLibrary\GameLibrary\bin\Debug\net10.0\Covers\portal2.jpg
+C:\Users\xteri\source\repos\GameLibrary\GameLibrary\bin\Debug\net10.0\Covers\silksong.jpg
+C:\Users\xteri\source\repos\GameLibrary\GameLibrary\bin\Debug\net10.0\Covers\stardew.jpg
+C:\Users\xteri\source\repos\GameLibrary\GameLibrary\bin\Debug\net10.0\Covers\witcher3.jpg

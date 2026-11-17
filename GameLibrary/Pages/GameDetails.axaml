@@ -1,0 +1,172 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" d:DesignWidth="1100" d:DesignHeight="750"
+             x:Class="GameLibrary.Pages.GameDetails"
+             x:CompileBindings="False">
+	<Grid RowDefinitions="Auto,*">
+		<Border Classes="topbar" Grid.Row="0">
+			<Grid ColumnDefinitions="*,Auto">
+				<StackPanel Spacing="4" VerticalAlignment="Center">
+					<TextBlock x:Name="TitleText" Classes="h2" Text="Игра"/>
+					<TextBlock x:Name="InfoText" Classes="muted"/>
+				</StackPanel>
+				<StackPanel Grid.Column="1"
+							Orientation="Horizontal"
+							Spacing="8"
+							VerticalAlignment="Center">
+					<Button x:Name="PlayButton"
+							Classes="primary"
+							Content="Играть"
+							Click="PlayButton_Click"/>
+					<Button Classes="ghost"
+							Content="Назад"
+							Click="BackButton_Click"/>
+				</StackPanel>
+			</Grid>
+		</Border>
+
+		<ScrollViewer Grid.Row="1" Margin="20">
+			<StackPanel Spacing="16">
+				<Border Classes="hero">
+					<Grid ColumnDefinitions="200,*" ColumnSpacing="20">
+						<Border Classes="coverplace" Width="180" Height="240" CornerRadius="12" ClipToBounds="True">
+							<Panel>
+								<TextBlock x:Name="CoverLetter" Classes="coverletter" Text="?"/>
+								<Image x:Name="CoverImage" Stretch="UniformToFill" IsVisible="False"/>
+							</Panel>
+						</Border>
+						<StackPanel Grid.Column="1" Spacing="10" VerticalAlignment="Center">
+							<TextBlock x:Name="HeroTitle" Classes="h1" Text="Игра"/>
+							<TextBlock x:Name="HeroMeta" Classes="muted"/>
+							<TextBlock x:Name="DescText" TextWrapping="Wrap"/>
+						</StackPanel>
+					</Grid>
+				</Border>
+
+				<Border Classes="panel">
+					<StackPanel Spacing="10">
+						<TextBlock Classes="h2" Text="Жанры / платформы / теги"/>
+
+						<Grid ColumnDefinitions="*,*,*" ColumnSpacing="12">
+							<StackPanel Spacing="8">
+								<TextBlock Text="Жанры"/>
+								<ListBox x:Name="GenresList" Height="120">
+									<ListBox.ItemTemplate>
+										<DataTemplate>
+											<TextBlock Text="{Binding Genres.Name}"/>
+										</DataTemplate>
+									</ListBox.ItemTemplate>
+								</ListBox>
+								<ComboBox x:Name="GenreBox" HorizontalAlignment="Stretch">
+									<ComboBox.ItemTemplate>
+										<DataTemplate>
+											<TextBlock Text="{Binding Name}"/>
+										</DataTemplate>
+									</ComboBox.ItemTemplate>
+								</ComboBox>
+								<StackPanel Orientation="Horizontal" Spacing="8">
+									<Button Classes="primary" Content="Добавить" Click="AddGenre_Click"/>
+									<Button Classes="danger" Content="Удалить" Click="RemoveGenre_Click"/>
+								</StackPanel>
+							</StackPanel>
+
+							<StackPanel Grid.Column="1" Spacing="8">
+								<TextBlock Text="Платформы"/>
+								<ListBox x:Name="PlatformsList" Height="120">
+									<ListBox.ItemTemplate>
+										<DataTemplate>
+											<TextBlock Text="{Binding Platforms.Name}"/>
+										</DataTemplate>
+									</ListBox.ItemTemplate>
+								</ListBox>
+								<ComboBox x:Name="PlatformBox" HorizontalAlignment="Stretch">
+									<ComboBox.ItemTemplate>
+										<DataTemplate>
+											<TextBlock Text="{Binding Name}"/>
+										</DataTemplate>
+									</ComboBox.ItemTemplate>
+								</ComboBox>
+								<StackPanel Orientation="Horizontal" Spacing="8">
+									<Button Classes="primary" Content="Добавить" Click="AddPlatform_Click"/>
+									<Button Classes="danger" Content="Удалить" Click="RemovePlatform_Click"/>
+								</StackPanel>
+							</StackPanel>
+
+							<StackPanel Grid.Column="2" Spacing="8">
+								<TextBlock Text="Теги"/>
+								<ListBox x:Name="TagsList" Height="120">
+									<ListBox.ItemTemplate>
+										<DataTemplate>
+											<TextBlock Text="{Binding Tags.Name}"/>
+										</DataTemplate>
+									</ListBox.ItemTemplate>
+								</ListBox>
+								<ComboBox x:Name="TagBox" HorizontalAlignment="Stretch">
+									<ComboBox.ItemTemplate>
+										<DataTemplate>
+											<TextBlock Text="{Binding Name}"/>
+										</DataTemplate>
+									</ComboBox.ItemTemplate>
+								</ComboBox>
+								<StackPanel Orientation="Horizontal" Spacing="8">
+									<Button Classes="primary" Content="Добавить" Click="AddTag_Click"/>
+									<Button Classes="danger" Content="Удалить" Click="RemoveTag_Click"/>
+								</StackPanel>
+							</StackPanel>
+						</Grid>
+					</StackPanel>
+				</Border>
+
+				<Border Classes="panel">
+					<StackPanel Spacing="10">
+						<TextBlock Classes="h2" Text="Заметки"/>
+						<ListBox x:Name="NotesList" Height="140">
+							<ListBox.ItemTemplate>
+								<DataTemplate>
+									<TextBlock Text="{Binding Body}" TextWrapping="Wrap"/>
+								</DataTemplate>
+							</ListBox.ItemTemplate>
+						</ListBox>
+						<TextBox x:Name="NoteBox"
+								 PlaceholderText="Новая заметка"
+								 AcceptsReturn="True"
+								 Height="70"
+								 TextWrapping="Wrap"/>
+						<StackPanel Orientation="Horizontal" Spacing="8">
+							<Button Classes="primary" Content="Добавить заметку" Click="AddNote_Click"/>
+							<Button Classes="danger" Content="Удалить заметку" Click="RemoveNote_Click"/>
+						</StackPanel>
+					</StackPanel>
+				</Border>
+
+				<Border Classes="panel">
+					<StackPanel Spacing="10">
+						<TextBlock Classes="h2" Text="Сессии игры"/>
+						<ListBox x:Name="SessionsList" Height="140">
+							<ListBox.ItemTemplate>
+								<DataTemplate>
+									<StackPanel>
+										<TextBlock Text="{Binding Minutes}"/>
+										<TextBlock Text="{Binding Comment}" Classes="muted"/>
+									</StackPanel>
+								</DataTemplate>
+							</ListBox.ItemTemplate>
+						</ListBox>
+						<StackPanel Orientation="Horizontal" Spacing="8">
+							<TextBox x:Name="SessionMinutesBox" Width="120" PlaceholderText="Минуты"/>
+							<TextBox x:Name="SessionCommentBox" Width="280" PlaceholderText="Комментарий"/>
+						</StackPanel>
+						<StackPanel Orientation="Horizontal" Spacing="8">
+							<Button Classes="primary" Content="Добавить сессию" Click="AddSession_Click"/>
+							<Button Classes="danger" Content="Удалить сессию" Click="RemoveSession_Click"/>
+						</StackPanel>
+					</StackPanel>
+				</Border>
+
+				<TextBlock x:Name="StatusText" Classes="muted"/>
+			</StackPanel>
+		</ScrollViewer>
+	</Grid>
+</UserControl>

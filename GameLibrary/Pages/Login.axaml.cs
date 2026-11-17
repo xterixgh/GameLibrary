@@ -25,7 +25,7 @@ namespace GameLibrary.Pages
             }
            
 
-            var loginUser = await App.DbContext.Users.FirstAsync(u => u.Login == login);
+            var loginUser = await App.DbContext.Users.FirstOrDefaultAsync(u => u.Login == login);
 
             if (loginUser == null || loginUser.PasswordHash != password) 
             {
@@ -33,6 +33,7 @@ namespace GameLibrary.Pages
                 ErrorText.IsVisible = true;
                 return;
             }
+            App.CurrentUser = loginUser;
             if (TopLevel.GetTopLevel(this) is MainWindow window)
                 window.MainControl.Content = new Library();
         }

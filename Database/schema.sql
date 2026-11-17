@@ -43,6 +43,8 @@ CREATE TABLE games (
     rating             NUMERIC(3,1) NULL CHECK (rating >= 1 AND rating <= 10),
     is_wishlist        BOOLEAN      NOT NULL DEFAULT FALSE,
     playtime_minutes   INTEGER      NOT NULL DEFAULT 0 CHECK (playtime_minutes >= 0),
+    cover_path         VARCHAR(500) NULL,
+    launch_path        VARCHAR(1000) NULL,
     created_at         TIMESTAMPTZ  NOT NULL DEFAULT now(),
     updated_at         TIMESTAMPTZ  NOT NULL DEFAULT now()
 );
